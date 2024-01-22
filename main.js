@@ -8,7 +8,7 @@ const arrowDown = document.getElementById("down")
 const invertButton = document.getElementById("invert")
 const startStopButton = document.getElementById("pause")
 const animesArray = [fullMetalAlchemist, aot, deathNote, sevenDeadlySins, overlord, blue_lock]
-let delay = 2000
+let delay = 4500
 let slideDirection = "up"
 
 
