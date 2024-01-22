@@ -6,7 +6,7 @@ const main_plot = document.querySelector("p")
 const arrowUp = document.getElementById("up")
 const arrowDown = document.getElementById("down")
 const animesArray = [fullMetalAlchemist, aot, deathNote, sevenDeadlySins, overlord, blue_lock]
-let delay = 3000
+let delay = 5000
 
 
 let currentPosition = 0;
@@ -34,8 +34,34 @@ function up() {
 }
 
 function updateMainContent(position) {
+    if (main_img.classList.contains("-z-5")) {
+        secondary_img.src = animesArray[position].source;
+        gsap.to(main_img, {
+            opacity: 0,
+            duration: 1.5,
+            onComplete() {
+                main_img.classList.remove("-z-5")
+                main_img.classList.add("-z-10")
+                secondary_img.classList.remove("-z-10")
+                secondary_img.classList.add("-z-5")
+                main_img.style.opacity = 1
+            }
+        })
+    } else {
+        main_img.src = animesArray[position].source;
+        gsap.to(secondary_img, {
+            opacity: 0,
+            duration: 1.5,
+            onComplete() {
+                secondary_img.classList.remove("-z-5")
+                secondary_img.classList.add("-z-10")
+                main_img.classList.remove("-z-10")
+                main_img.classList.add("-z-5")
+                secondary_img.style.opacity = 1
+            }
+        })
+    }
 
-    main_img.src = animesArray[position].source;
     main_title.innerText = animesArray[position].title;
     main_plot.innerText = animesArray[position].plot;
 }
