@@ -8,39 +8,50 @@ class Anime {
 
 const deathNote = new Anime({
     title: "Death Note",
-    plot: "La storia racconta di Light, un brillante studente delle superiori che trova per caso un Death Note, un quaderno di proprietà dello shinigami (un dio della morte giapponese) Riuk, e grazie a cui Light può uccidere chiunque semplicemente annotandovi sopra il nome.",
+    plot: "La storia racconta di Light, uno studente brillante che trova un Death Note e, grazie a esso, può uccidere chiunque semplicemente scrivendo il nome nel quaderno.",
     source: "/img/deathnote.png"
 })
 
 const aot = new Anime({
     title: "Attack on Titan (Shingeki no Kyojin)",
-    plot: "Attack on Titan è ambientato in un mondo dove enormi creature chiamate Titani minacciano l'esistenza umana. La storia segue Eren Yeager, Mikasa Ackerman e Armin Arlert, giovani soldati che si uniscono alla Corpo di Ricerca delle Dimensioni Umane per combattere i Titani e scoprire i segreti dietro la loro origine. Man mano che la trama si sviluppa, emergono misteri legati alle origini dei Titani, al governo e alla storia stessa del mondo.",
+    plot: "Ambientato in un mondo minacciato dai Titani, segue Eren, Mikasa e Armin che combattono per scoprire i segreti dietro di loro e difendere l'umanità contro le creature giganti.",
     source: "/img/aot.jpg"
 })
 
 const fullMetalAlchemist = new Anime({
     title: "Fullmetal Alchemist: Brotherhood",
-    plot: "Fullmetal Alchemist: Brotherhood segue le avventure dei fratelli Elric, Edward e Alphonse, in un mondo in cui l'alchimia è una scienza avanzata. Dopo un tragico incidente durante un rituale di alchimia per riportare in vita la madre, Edward perde un braccio e una gamba, mentre Alphonse perde l'intero corpo, il cui spirito viene legato a un'armatura. I fratelli cercano la Pietra Filosofale per ripristinare i loro corpi, ma si trovano coinvolti in una cospirazione più ampia che coinvolge il governo e la verità oscura dietro la Pietra Filosofale.",
+    plot: "Segue i fratelli Elric in un mondo di alchimia, alla ricerca della Pietra Filosofale e coinvolti in una cospirazione più ampia che coinvolge il governo e la verità oscura dietro la Pietra Filosofale.",
     source: "/img/fullmetalalchemist.jpg"
 })
 
 const sevenDeadlySins = new Anime({
     title: "Seven Deadly Sins (Nanatsu no Taizai)",
-    plot: "Seven Deadly Sin segue la storia dei Sette Peccati Capitali, un gruppo di potenti guerrieri che sono stati accusati ingiustamente di tradimento. Dopo essere stati dispersi, la principessa Elizabeth cerca il loro aiuto per salvare il regno dai Cavalieri Sacri corrotti. Ogni membro dei Sette Peccati ha una magia unica e un oscuro passato. La trama segue le loro avventure mentre combattono contro forze oscure, svelando segreti nascosti e affrontando potenti nemici. Con una combinazione di azione, avventura e mistero, Seven Deadly Sins offre una storia ricca di personaggi affascinanti e colpi di scena emozionanti",
+    plot: "La principessa Elizabeth cerca l'aiuto dei Sette Peccati Capitali contro i Cavalieri Sacri corrotti. Mentre combattono contro forze oscure, emergono segreti e affrontano nemici potenti in una storia ricca di personaggi affascinanti e colpi di scena emozionanti.",
     source: "/img/7ds.jpg"
 })
 
 const overlord = new Anime({
     title: "Overlord",
-    plot: "Overlord segue la storia di Momonga, un giocatore di un popolare gioco online che rimane connesso al gioco quando il server viene chiuso. Trovandosi intrappolato nel mondo virtuale, Momonga decide di esplorare e scoprire se ci sono altri giocatori come lui. Con il suo potente avatar e i suoi seguaci, inizia a dominare il mondo di Yggdrasil. La trama esplora il concetto di essere intrappolati in un mondo di gioco, la crescita del protagonista come sovrano e le interazioni con personaggi inusuali. Overlord è noto per il suo protagonista immensamente potente e per la sua esplorazione di temi fantasy",
+    plot: "Momonga, intrappolato in un mondo di gioco dopo la chiusura del server, esplora, domina con il suo avatar e affronta temi fantasy in un'avventura che esplora il concetto di essere intrappalato in un mondo virtuale.",
     source: "/img/overlord.png"
 })
 
-
 const blue_lock = new Anime({
     title: "Blue Lock",
-    plot: "Blue Lock racconta la storia di Yoichi Isagi, un promettente giocatore di calcio. Dopo una delusione durante una partita cruciale, Isagi viene convocato in un programma speciale chiamato Blue Lock, progettato per sviluppare un attaccante nazionale per il Giappone. All'interno di Blue Lock, giocatori talentuosi competono feroce per guadagnarsi il ruolo di attaccante principale, portando a intense rivalità e scoperte personali. La serie esplora temi di competizione, crescita personale e il prezzo del successo nel mondo del calcio",
+    plot: "Yoichi Isagi, promettente giocatore di calcio, entra in Blue Lock per diventare attaccante nazionale. All'interno, si svolgono intense rivalità e scoperte personali mentre affronta la competizione e il prezzo del successo nel mondo del calcio.",
     source: "/img/bluelock.jpg"
+})
+
+const dbz = new Anime({
+    title: "Dragon Ball Z",
+    plot: "Goku, un potente guerriero, difende la Terra da minacce cosmiche, affrontando avversari sempre più forti. La storia esplora combattimenti epici, amicizia e la crescita di Goku come guerriero.",
+    source: "/img/dbz.jpg"
+})
+
+const hxh = new Anime({
+    title: "Hunter x Hunter",
+    plot: "Gon Freecss, giovane avventuriero, si imbarca in una missione per diventare un Cacciatore e trovare suo padre. Lungo il percorso, affronta sfide, stringe amicizie e scopre il mondo dei Cacciatori.",
+    source: "/img/hunterxhunter.jpg"
 })
 
 

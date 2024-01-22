@@ -7,7 +7,7 @@ const arrowUp = document.getElementById("up")
 const arrowDown = document.getElementById("down")
 const invertButton = document.getElementById("invert")
 const startStopButton = document.getElementById("pause")
-const animesArray = [fullMetalAlchemist, aot, deathNote, sevenDeadlySins, overlord, blue_lock]
+const animesArray = [fullMetalAlchemist, aot, deathNote, sevenDeadlySins, overlord, blue_lock, dbz, hxh]
 let delay = 4500
 let slideDirection = "up"
 
@@ -17,23 +17,36 @@ let currentPosition = 0;
 arrowDown.addEventListener("click", down);
 
 function down() {
-    clearInterval(autoSlide)
-    createInterval(slideDirection)
+    arrowDown.removeEventListener("click", down)
+    if (autoSlide) {
+        clearInterval(autoSlide)
+        createInterval(slideDirection)
+    }
+
     currentPosition === 0 ? currentPosition = animesArray.length - 1 : currentPosition--;
 
     updateMainContent(currentPosition);
     updateThumbnailSources(currentPosition);
+    setTimeout(() => {
+        arrowDown.addEventListener("click", down);
+    }, 1500)
 }
 
 arrowUp.addEventListener("click", up);
 
 function up() {
-    clearInterval(autoSlide)
-    createInterval(slideDirection)
+    arrowUp.removeEventListener("click", up);
+    if (autoSlide) {
+        clearInterval(autoSlide)
+        createInterval(slideDirection)
+    }
     currentPosition === animesArray.length - 1 ? currentPosition = 0 : currentPosition++;
 
     updateMainContent(currentPosition);
     updateThumbnailSources(currentPosition);
+    setTimeout(() => {
+        arrowUp.addEventListener("click", up);
+    }, 1500)
 }
 
 function updateMainContent(position) {
@@ -85,6 +98,7 @@ function generateThumbnails() {
         let thumbnailIMG = new Image()
         thumbnailIMG.src = animesArray[i].source
         thumbnailIMG.className = "h-2/6 thumbnail"
+        thumbnailIMG.style.opacity = "0.4"
         if (i == 0) {
             thumbnailIMG.classList.add("rounded-tr-xl")
         } else if (i == 2) {
@@ -92,8 +106,11 @@ function generateThumbnails() {
         }
         thumbnail_container.append(thumbnailIMG)
         thumbnailIMG.addEventListener("click", (e) => {
-            clearInterval(autoSlide)
-            createInterval()
+            if (autoSlide) {
+                clearInterval(autoSlide)
+                createInterval(slideDirection)
+            }
+
             if (main_img.classList.contains("-z-5")) {
                 secondary_img.src = e.target.src
                 gsap.to(main_img, {
@@ -162,7 +179,7 @@ startStopButton.addEventListener("click", () => {
         clearInterval(autoSlide)
         autoSlide = null
     } else {
-        createInterval()
+        createInterval(slideDirection)
     }
 
 })

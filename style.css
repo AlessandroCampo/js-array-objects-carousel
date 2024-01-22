@@ -19,3 +19,7 @@ i {
 #thumbnail-container img {
     height: calc(100% / 3) !important
 } */
+
+.thumbnail:hover {
+    opacity: 1 !important
+}
