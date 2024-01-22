@@ -9,7 +9,7 @@ class Anime {
 const deathNote = new Anime({
     title: "Death Note",
     plot: "La storia racconta di Light, un brillante studente delle superiori che trova per caso un Death Note, un quaderno di proprietà dello shinigami (un dio della morte giapponese) Riuk, e grazie a cui Light può uccidere chiunque semplicemente annotandovi sopra il nome.",
-    source: "/img/deathnote.jpg"
+    source: "/img/deathnote.png"
 })
 
 const aot = new Anime({
