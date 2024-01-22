@@ -6,25 +6,35 @@ const main_plot = document.querySelector("p")
 const arrowUp = document.getElementById("up")
 const arrowDown = document.getElementById("down")
 const animesArray = [fullMetalAlchemist, aot, deathNote, sevenDeadlySins, overlord, blue_lock]
+let delay = 3000
 
 
 let currentPosition = 0;
 
-arrowDown.addEventListener("click", () => {
+arrowDown.addEventListener("click", down);
+
+function down() {
+    clearInterval(autoSlide)
+    createInterval()
     currentPosition === 0 ? currentPosition = animesArray.length - 1 : currentPosition--;
 
     updateMainContent(currentPosition);
     updateThumbnailSources(currentPosition);
-});
+}
 
-arrowUp.addEventListener("click", () => {
+arrowUp.addEventListener("click", up);
+
+function up() {
+    clearInterval(autoSlide)
+    createInterval()
     currentPosition === animesArray.length - 1 ? currentPosition = 0 : currentPosition++;
 
     updateMainContent(currentPosition);
     updateThumbnailSources(currentPosition);
-});
+}
 
 function updateMainContent(position) {
+
     main_img.src = animesArray[position].source;
     main_title.innerText = animesArray[position].title;
     main_plot.innerText = animesArray[position].plot;
@@ -64,3 +74,11 @@ function generateThumbnails() {
         })
     }
 }
+
+let autoSlide
+
+function createInterval() {
+    autoSlide = setInterval(up, delay)
+}
+
+createInterval()
