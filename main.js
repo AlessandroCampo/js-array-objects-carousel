@@ -185,18 +185,31 @@ startStopButton.addEventListener("click", () => {
 })
 
 invertButton.addEventListener("click", () => {
-    clearInterval(autoSlide)
-    if (invertButton.classList.contains("fa-circle-up")) {
-        invertButton.classList.remove("fa-circle-up")
-        invertButton.classList.add("fa-circle-down")
-        slideDirection = "down"
-        createInterval(slideDirection)
-    } else if (invertButton.classList.contains("fa-circle-down")) {
-        invertButton.classList.remove("fa-circle-down")
-        invertButton.classList.add("fa-circle-up")
-        slideDirection = "up"
-        createInterval(slideDirection)
+    if (startStopButton.classList.contains("fa-circle-stop")) {
+        clearInterval(autoSlide)
+        if (invertButton.classList.contains("fa-circle-up")) {
+            invertButton.classList.remove("fa-circle-up")
+            invertButton.classList.add("fa-circle-down")
+            slideDirection = "down"
+            createInterval(slideDirection)
+        } else if (invertButton.classList.contains("fa-circle-down")) {
+            invertButton.classList.remove("fa-circle-down")
+            invertButton.classList.add("fa-circle-up")
+            slideDirection = "up"
+            createInterval(slideDirection)
+        }
+    } else if (startStopButton.classList.contains("fa-circle-play")) {
+        if (invertButton.classList.contains("fa-circle-up")) {
+            invertButton.classList.remove("fa-circle-up")
+            invertButton.classList.add("fa-circle-down")
+            slideDirection = "down"
+        } else if (invertButton.classList.contains("fa-circle-down")) {
+            invertButton.classList.remove("fa-circle-down")
+            invertButton.classList.add("fa-circle-up")
+            slideDirection = "up"
+        }
     }
+
 })
 
 
