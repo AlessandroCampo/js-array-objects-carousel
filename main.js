@@ -101,6 +101,7 @@ function generateThumbnails() {
         thumbnailIMG.style.opacity = "0.4"
         if (i == 0) {
             thumbnailIMG.classList.add("rounded-tr-xl")
+            thumbnailIMG.style.border = "2px solid white"
         } else if (i == 2) {
             thumbnailIMG.classList.add("rounded-br-xl")
         }
@@ -211,5 +212,4 @@ invertButton.addEventListener("click", () => {
     }
 
 })
-
 
